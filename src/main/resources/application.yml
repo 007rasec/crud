@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=Spring_Test
+    username: sa
+    password: sistemas123
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
+
+app.jwtSecret: TransportesScaramutti
+app.jwtExpirationInMs: 604800000
